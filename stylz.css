@@ -42,7 +42,7 @@ nav .container {
   display: flex;
   justify-content: space-between !important;
   align-items: center;
-  position: relative;
+  /* position: relative; */
 }
 
 nav .container a,
@@ -94,14 +94,14 @@ nav .container .links {
   position: absolute;
   right: 0;
   top: 0;
-  background-color: white;
+  background-color: rgb(39, 37, 37);
   height: 100vh;
-  width: 50%;
+  width: 100vw;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  transform: translateX(1000px);
+  transform: translateX(150vw);
   z-index: 98 !important;
   font-weight: 600;
   letter-spacing: 1px;
@@ -302,7 +302,70 @@ div.banner {
 }
 
 .services {
-  height: 100vh;
+  padding: 2rem 0;
+}
+.services > .heading,
+.contact > .heading {
+  text-align: center;
+}
+.services > div h1,
+.contact > div h1 {
+  display: inline-block;
+  margin: auto;
+  min-width: 100px;
+
+  background: linear-gradient(
+    90deg,
+    rgba(132, 94, 194, 1) 0%,
+    rgba(191, 52, 180, 1) 50%,
+    rgba(212, 55, 37, 1) 100%
+  );
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}
+
+.services .container {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.services .container .card {
+  width: 300px;
+  /* height: 450px; */
+  border: 1px solid grey;
+  margin: 10px;
+  padding: 10px;
+  border-radius: 10px;
+  transition: box-shadow 0.5s;
+  cursor: pointer;
+}
+
+.services .container .card:hover {
+  box-shadow: -1px 7px 19px 0px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: -1px 7px 19px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: -1px 7px 19px 0px rgba(0, 0, 0, 0.75);
+}
+
+.services .container .card > *,
+.services .container .card .cardFoot > * {
+  margin: 1rem 0;
+}
+
+.services .container .card .cardBody {
+  height: 100%;
+}
+
+.card .cardBody img {
+  width: 100%;
+}
+
+.services .container .card .cardFoot p {
+  text-indent: 25px;
+}
+
+.contact {
 }
 
 .footer {
